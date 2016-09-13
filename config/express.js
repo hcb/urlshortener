@@ -33,6 +33,7 @@ module.exports = function() {
 
     require('../app/routes/index.server.routes.js')(app);
     require('../app/routes/url.server.routes.js')(app);
+    require('../app/routes/redirect.server.routes.js')(app);
 
     return app;
 };
