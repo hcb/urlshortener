@@ -1,0 +1,29 @@
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns">
+                <p>
+                    This is the footer.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- bower:js -->
+<script src="/lib/jquery/dist/jquery.min.js"></script>
+<!-- endbower -->
+<script>
+    $(document).ready(function() {
+        var $form = $("#form");
+        if ($form.length) {
+            $form.submit(function(e) {
+                e.preventDefault();
+                $.ajax({url: "url/create", method: "POST", data: $form.serialize()}).done(function(res) {
+                    console.log(res);
+                }).fail(function(err) {
+                    $(".error").html(err.responseText);
+                });
+            });
+        }
+    });
+</script>

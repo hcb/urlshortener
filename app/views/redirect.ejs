@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" ng-app>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title><%= title %></title>
-  <!-- bower:css -->
-  <!-- <link rel="stylesheet" href="/lib/normalize-css/normalize.css" /> -->
-  <!-- endbower -->
+    <% include partials/head %>
 </head>
 <body>
-    <%= title %>
 
-    <p><%= text %></p>
-    <!-- bower:js -->
-    <!-- <script src="/lib/jquery/dist/jquery.min.js"></script> -->
-    <!-- endbower -->
+    <% include partials/header %>
+
+    <p>
+        <%= text %>
+    </p>
+
+    <% include partials/footer %>
 
 </body>
 </html>
