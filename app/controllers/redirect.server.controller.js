@@ -9,7 +9,7 @@ exports.render = function(req, res) {
         if (err) return console.error(err);
         if (url == null) {
             res.render('redirect', {
-                title: 'Redirect Page',
+                title: 'Invalid Link',
                 text: 'This is not a valid link.'
             });
         }
@@ -17,7 +17,7 @@ exports.render = function(req, res) {
             res.redirect(url.url);
         } else {
             res.render('redirect', {
-                title: 'Redirect Page',
+                title: 'Invalid Link',
                 text: 'This is not a valid link.'
             });
         }
